@@ -35,6 +35,14 @@ function fibonacci(n) {
   }
 }
 
+/// с мемоизацией
+function fibonacci2(n) {
+  const obj = {}
+ if(n < 3 ) return 1
+ if(obj[n]) return obj[n]
+ if(!obj[n]) return obj[n] = fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 //цикл
 function fibonacciCycle(n) {
   let p = []
@@ -52,4 +60,3 @@ fibonacci(10)
 
 console.log(fibonacci(10)); // Ожидаемый результат: 55
 
-//мемоизация ????
